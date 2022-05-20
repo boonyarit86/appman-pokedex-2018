@@ -19,6 +19,8 @@
   --modalContentBoxShadow: #474444;
   --modalContentBackground: #fff;
   --searchBoxBorder: #e6e6e6;
+
+  --color-white: #fff;
 }
 
 body {
