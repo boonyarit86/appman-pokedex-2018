@@ -1,3 +1,26 @@
+:root {
+  /* FONT */
+  --font-size--default: 24px;
+  --font-size--title: 32px;
+  --font-size--heading: 40px;
+
+  /* COLOR */
+  --cardBoxShadow: #d5d6dc;
+  --cardBoxShadowHover: #aeaeae;
+  --cardBackground: #f3f4f7;
+  --colorAddButton: #dc7777;
+  --levelTubeBackground: #e4e4e4;
+  --levelTubeBoxShadow: #d4d4d4;
+  --levelTubeValueBackground: #f3701a;
+  --bottomBarBackground: #ec5656;
+  --bottomBarBoxShadow: #d9333387;
+  --bottomBarTextColor: #fff;
+  --modalOutside: #000000a3;
+  --modalContentBoxShadow: #474444;
+  --modalContentBackground: #fff;
+  --searchBoxBorder: #e6e6e6;
+}
+
 body {
   margin: 0;
   padding: 0;

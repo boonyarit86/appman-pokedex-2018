@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css'
 
 const COLORS = {
@@ -15,13 +15,12 @@ const COLORS = {
   Fire: "#eb4d4b"
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className="App">
+      
+    </div>
+  )
 }
 
 export default App
