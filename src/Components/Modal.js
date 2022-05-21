@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setPokemons, addPokemon } from "../Redux/features/pokemonSlice";
 import PokemonCard from "./PokemonCard";
 import "./Modal.css";
 
 const Modal = () => {
-  const [pokemons, setPokemons] = useState([]);
+  const dispatch = useDispatch();
+  const pokemons = useSelector((state) => state.pokemon.pokemons);
   const [searchValue, setSearchValue] = useState("");
 
   const TYPES = [
@@ -54,18 +57,20 @@ const Modal = () => {
             doc.weaknesses = wek >= 1 ? 100 : 0;
             doc.damage = damage;
             doc.happiness = Math.ceil(happiness);
-            // console.log(doc.weaknesses)
           });
 
-          setPokemons(res.data.cards);
-          console.log(res.data.cards);
-          // http://localhost:3030/api/cards?limit=30&name=Deoxys ex&type=Psychic
+          dispatch(setPokemons(res.data.cards));
         })
         .catch((error) => {});
     }
 
     fetchData();
   }, [searchValue]);
+
+  const onClickAddPokemon = (data) => {
+    console.log(data);
+    dispatch(addPokemon(data))
+  }
 
   return (
     <div className="modal">
@@ -84,7 +89,7 @@ const Modal = () => {
         {pokemons.length > 0 &&
           pokemons.map((item) => (
             <React.Fragment key={item.id}>
-              <PokemonCard data={item} />
+              <PokemonCard data={item} action="add" onClick={onClickAddPokemon} />
             </React.Fragment>
           ))}
       </div>

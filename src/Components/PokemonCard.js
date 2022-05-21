@@ -1,14 +1,19 @@
 import React from "react";
 import "./PokemonCard.css";
 
-const PokemonCard = ({ data, action="f" }) => {
+const PokemonCard = ({ data, action, onClick }) => {
   return (
     <div className="pokemon__card">
       <img src={data.imageUrl} alt={data.name} className="pokemon__img" />
       <div className="pokemon__detail">
         <div className="pokemon__header">
           <h3 className="pokemon__name">{data.name}</h3>
-          <p className="pokemon__action">{action === "add" ? "ADD" : "X"}</p>
+          <p
+            className="pokemon__action"
+            onClick={() => onClick(data)}
+          >
+            {action === "add" ? "ADD" : "X"}
+          </p>
         </div>
         <ul className="pokemon__status">
           <li className="pokemon__status-box">
