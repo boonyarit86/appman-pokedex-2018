@@ -63,9 +63,21 @@
   background-color: var(--levelTubeValueBackground);
   border-radius: 20px;
 }
-.pokemon__name {
+.pokemon__name1,
+.pokemon__type {
   flex: 1;
 }
+.pokemon__type {
+  margin-left: 5px;
+}
+.pokemon__type p {
+  width: fit-content;
+  padding: 1px 3px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #000;
+}
+
 .pokemon__action,
 .pokemon__name {
   font-size: 24px;

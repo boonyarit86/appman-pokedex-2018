@@ -1,6 +1,20 @@
 import React from "react";
 import "./PokemonCard.css";
 
+const COLORS = {
+  Psychic: "#f8a5c2",
+  Fighting: "#f0932b",
+  Fairy: "#c44569",
+  Normal: "#f6e58d",
+  Grass: "#badc58",
+  Metal: "#95afc0",
+  Water: "#3dc1d3",
+  Lightning: "#f9ca24",
+  Darkness: "#574b90",
+  Colorless: "#FFF",
+  Fire: "#eb4d4b",
+};
+
 const PokemonCard = ({ data, action, onClick }) => {
   return (
     <div className="pokemon__card">
@@ -8,15 +22,17 @@ const PokemonCard = ({ data, action, onClick }) => {
       <div className="pokemon__detail">
         <div className="pokemon__header">
           <h3 className="pokemon__name">{data.name}</h3>
-          <p
-            className="pokemon__action"
-            onClick={() => onClick(data)}
-          >
+          <div className="pokemon__type">
+            <p style={{ backgroundColor: `${COLORS[data.type] || "blue"}` }}>
+              {data.type || "none"}
+            </p>
+          </div>
+          <p className="pokemon__action" onClick={() => onClick(data)}>
             {action === "add" ? "ADD" : "X"}
           </p>
         </div>
         <ul className="pokemon__status">
-          <li className="pokemon__status-box">     
+          <li className="pokemon__status-box">
             <p className="pokemon__title">HP</p>
             <div className="pokemon__progressBar">
               <div
