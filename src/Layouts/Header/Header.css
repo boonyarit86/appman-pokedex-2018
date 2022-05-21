@@ -3,6 +3,12 @@
     font-weight: 700;
     font-size: var(--font-size--heading);
     line-height: 1.2;
-    padding: 20px;
     margin: 0;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,73 @@
+.pokemon__card,
+.pokemon__happiness,
+.pokemon__status-box,
+.pokemon__header {
+  display: flex;
+}
+.pokemon__status-box,
+.pokemon__header {
+  align-items: center;
+}
+
+.pokemon__card {
+  gap: 20px;
+  background-color: var(--cardBackground);
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 8px 0px var(--cardBoxShadow);
+}
+.pokemon__card:hover {
+  box-shadow: 0px 2px 8px 0px var(--cardBoxShadowHover);
+}
+
+.pokemon__img {
+  width: 250px;
+  height: 350px;
+}
+.pokemon__detail {
+  flex: 1;
+}
+.pokemon__status {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.pokemon__happiness {
+  gap: 5px;
+}
+.pokemon__happiness img {
+  width: 32px;
+  height: 32px;
+}
+.pokemon__title {
+  width: 150px;
+  margin: 3px 0;
+}
+.pokemon__progressBar {
+  width: 400px;
+  height: 20px;
+  background-color: var(--levelTubeBackground);
+  border-radius: 20px;
+}
+.pokemon__progress {
+  height: 20px;
+  background-color: var(--levelTubeValueBackground);
+  border-radius: 20px;
+}
+.pokemon__name {
+  flex: 1;
+}
+.pokemon__action,
+.pokemon__name {
+  font-size: 24px;
+}
+.pokemon__action {
+  display: none;
+  color: var(--colorAddButton);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.pokemon__card:hover .pokemon__action {
+  display: block;
+}
