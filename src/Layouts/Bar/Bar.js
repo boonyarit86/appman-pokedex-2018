@@ -4,7 +4,6 @@ import { openModal } from "../../Redux/features/stateSlice";
 import "./Bar.css";
 
 const Bar = React.memo(() => {
-  console.log("Render bar")
   const dispatch = useDispatch();
 
   return (
