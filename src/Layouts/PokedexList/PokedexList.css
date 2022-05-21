@@ -1,0 +1,9 @@
+.pokedexList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    /* Height: 100% - (header + bar) */
+    height: calc(100% - (80px + 60px));
+    overflow-y: auto;
+    padding: 0 10px;
+}

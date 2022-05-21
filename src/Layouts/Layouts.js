@@ -5,6 +5,7 @@ import Backdrop from "../Components/Backdrop";
 import Bar from "./Bar/Bar";
 import Header from "./Header/Header";
 import Modal from "../Components/Modal";
+import PokedexList from "./PokedexList/PokedexList";
 import "./Layouts.css";
 
 const Layouts = () => {
@@ -14,7 +15,7 @@ const Layouts = () => {
   return (
     <div className="layouts">
       <Header />
-
+      <PokedexList />
       <Bar />
       {isModal && (
         <React.Fragment>

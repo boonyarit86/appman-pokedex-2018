@@ -1,7 +1,7 @@
 .header h1 {
     text-align: center;
     font-weight: 700;
-    font-size: var(--font-size--heading);
+    font-size: 40px;
     line-height: 1.2;
     margin: 0;
 }

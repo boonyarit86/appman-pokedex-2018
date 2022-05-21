@@ -16,12 +16,12 @@ const PokemonCard = ({ data, action, onClick }) => {
           </p>
         </div>
         <ul className="pokemon__status">
-          <li className="pokemon__status-box">
+          <li className="pokemon__status-box">     
             <p className="pokemon__title">HP</p>
             <div className="pokemon__progressBar">
               <div
                 className="pokemon__progress"
-                style={{ width: `calc((400px/100)*${data.hp})` }}
+                style={{ width: `calc((100%/100)*${data.hp})` }}
               />
             </div>
           </li>
@@ -30,7 +30,7 @@ const PokemonCard = ({ data, action, onClick }) => {
             <div className="pokemon__progressBar">
               <div
                 className="pokemon__progress"
-                style={{ width: `calc((400px/100)*${data.strength})` }}
+                style={{ width: `calc((100%/100)*${data.strength})` }}
               />
             </div>
           </li>
@@ -39,7 +39,7 @@ const PokemonCard = ({ data, action, onClick }) => {
             <div className="pokemon__progressBar">
               <div
                 className="pokemon__progress"
-                style={{ width: `calc((400px/100)*${data.weaknesses})` }}
+                style={{ width: `calc((100%/100)*${data.weaknesses})` }}
               />
             </div>
           </li>

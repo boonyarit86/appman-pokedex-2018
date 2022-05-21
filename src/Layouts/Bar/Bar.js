@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import { openModal } from "../../Redux/features/stateSlice";
 import "./Bar.css";
 
-const Bar = () => {
+const Bar = React.memo(() => {
+  console.log("Render bar")
   const dispatch = useDispatch();
 
   return (
@@ -13,6 +14,6 @@ const Bar = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Bar;
